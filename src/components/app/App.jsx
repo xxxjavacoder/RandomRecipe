@@ -1,8 +1,8 @@
 import './App.scss';
 
-import Header from '../header/index.jsx';
-import Footer from '../footer/index.jsx';
-import Container from '../container/index.jsx';
+import Header from '../layout/header/index.jsx';
+import Footer from '../layout/footer/index.jsx';
+import Container from '../layout/container/index.jsx';
 
 function App() {
   return (
