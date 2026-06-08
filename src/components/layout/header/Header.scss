@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 15px;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-card);
+  border-bottom: 1px solid var(--border-secondary);
+  
+  &__logo-wrapper {
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6531ff;
+    border-radius: 9px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(#6531ff, 0.8);
+    }
+  }
+}
