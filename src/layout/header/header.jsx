@@ -1,5 +1,5 @@
 import './Header.scss';
-import logo from '../../../../public/images/hirehub.png';
+import logo from '../../../public/images/hirehub.png';
 
 export const Header = () => {
     return (
