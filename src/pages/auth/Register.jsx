@@ -1,4 +1,7 @@
 import { useState } from "react";
+import {Button} from "../../components/button/Button.jsx";
+import {Input} from "../../components/input/Input.jsx";
+import {Select} from "../../components/select/Select.jsx";
 
 export const Register = () => {
     const [email, setEmail] = useState("");
@@ -26,28 +29,35 @@ export const Register = () => {
         <>
             <h1>Register</h1>
 
-            <input
+            <Input
+                className="mt-3 mb-3 w-300px"
                 type="email"
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
             />
 
-            <select
+            <Select
+                className="mt-3 mb-3 w-300px"
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
+                options={[
+                    {
+                        value: "candidate",
+                        label: "Candidate",
+                    },
+                    {
+                        value: "recruiter",
+                        label: "Recruiter",
+                    }
+                ]}
+            />
+
+            <Button
+                className="btn-warning"
+                onClick={handleRegister}
             >
-                <option value="candidate">
-                    Candidate
-                </option>
-
-                <option value="recruiter">
-                    Recruiter
-                </option>
-            </select>
-
-            <button onClick={handleRegister}>
                 Register
-            </button>
+            </Button>
         </>
     );
 }

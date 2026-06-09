@@ -1,0 +1,53 @@
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  color: var(--text-primary);
+  transition: opacity 0.5s ease-in-out;
+
+  &-primary {
+    background-color: var(--primary);
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+  }
+
+  &-success {
+    background-color: var(--success);
+
+    &:hover {
+      background-color: var(--success);
+      opacity: 0.8;
+    }
+  }
+
+  &-warning {
+    background-color: var(--warning);
+
+    &:hover {
+      background-color: var(--warning);
+      opacity: 0.8;
+    }
+  }
+
+  &-danger {
+    background-color: var(--danger);
+
+    &:hover {
+      background-color: var(--danger);
+      opacity: 0.8;
+    }
+  }
+}

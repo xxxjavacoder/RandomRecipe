@@ -1,6 +1,9 @@
 .header {
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px;
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-card);
@@ -15,6 +18,22 @@
     img {
       height: inherit;
       width: inherit;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-primary);
     }
   }
 }
