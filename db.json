@@ -12,5 +12,55 @@
       "password": "qwerty",
       "role": "recruiter"
     }
+  ],
+  "vacancies": [
+    {
+      "id": 1,
+      "title": "Senior Front End developer",
+      "description": "...",
+      "level": 1,
+      "localization": "Poland",
+      "type": "Remote"
+    },
+    {
+      "id": 2,
+      "title": "Middle Back End developer",
+      "description": "...",
+      "level": 2,
+      "localization": "Ukraine",
+      "type": "Hybrid"
+    },
+    {
+      "id": 3,
+      "title": "Senior Automation QA",
+      "description": "...",
+      "level": 1,
+      "localization": "Poland",
+      "type": "Office"
+    },
+    {
+      "id": 4,
+      "title": "Junior Recruiter/Sourcer",
+      "description": "...",
+      "level": 3,
+      "localization": "Germany",
+      "type": "Remote"
+    },
+    {
+      "id": 5,
+      "title": "Senior Front End developer",
+      "description": "...",
+      "level": 1,
+      "localization": "Poland",
+      "type": "Office"
+    },
+    {
+      "id": 6,
+      "title": "Senior Project Manager",
+      "description": "...",
+      "level": 1,
+      "localization": "Spain",
+      "type": "Hybrid"
+    }
   ]
 }

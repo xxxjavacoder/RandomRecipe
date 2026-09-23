@@ -9,7 +9,7 @@ import Container from '../layout/container/index.jsx';
 import {Guest} from '../pages/guest/Guest.jsx';
 import {Login} from '../pages/auth/Login.jsx';
 import {Register} from "../pages/auth/Register.jsx";
-import {CandidateDashboard} from "../pages/candidate/dashboard/CandidateDashboard.jsx";
+import CandidateDashboard from "../pages/candidate/dashboard/CandidateDashboard.jsx";
 import {RecruiterDashboard} from "../pages/recruiter/dashboard/RecruiterDashboard.jsx";
 
 import {ProtectedRoute} from "../routes/ProtectedRoute.jsx";
