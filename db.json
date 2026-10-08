@@ -1,66 +1,752 @@
 {
-  "users": [
+  "categories": [
     {
       "id": 1,
-      "email": "test@test.com",
-      "password": "qwerty",
-      "role": "candidate"
+      "name": "М'ясо",
+      "slug": "meat"
     },
     {
       "id": 2,
-      "email": "test_2@test.com",
-      "password": "qwerty",
-      "role": "recruiter"
-    }
-  ],
-  "vacancies": [
-    {
-      "id": 1,
-      "title": "Senior Front End developer",
-      "description": "...",
-      "level": 1,
-      "localization": "Poland",
-      "type": "Remote"
-    },
-    {
-      "id": 2,
-      "title": "Middle Back End developer",
-      "description": "...",
-      "level": 2,
-      "localization": "Ukraine",
-      "type": "Hybrid"
+      "name": "Овочі",
+      "slug": "vegetables"
     },
     {
       "id": 3,
-      "title": "Senior Automation QA",
-      "description": "...",
-      "level": 1,
-      "localization": "Poland",
-      "type": "Office"
+      "name": "Молочні продукти",
+      "slug": "dairy"
     },
     {
       "id": 4,
-      "title": "Junior Recruiter/Sourcer",
-      "description": "...",
-      "level": 3,
-      "localization": "Germany",
-      "type": "Remote"
+      "name": "Крупи та макарони",
+      "slug": "grains"
     },
     {
       "id": 5,
-      "title": "Senior Front End developer",
-      "description": "...",
-      "level": 1,
-      "localization": "Poland",
-      "type": "Office"
+      "name": "Бобові",
+      "slug": "legumes"
     },
     {
       "id": 6,
-      "title": "Senior Project Manager",
-      "description": "...",
-      "level": 1,
-      "localization": "Spain",
-      "type": "Hybrid"
+      "name": "Олії та жири",
+      "slug": "oils"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Куряче філе",
+      "slug": "chicken-breast"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Яловичина",
+      "slug": "beef"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Бекон",
+      "slug": "bacon"
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "name": "Картопля",
+      "slug": "potato"
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "name": "Цибуля",
+      "slug": "onion"
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "name": "Часник",
+      "slug": "garlic"
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "name": "Помідор",
+      "slug": "tomato"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "name": "Огірок",
+      "slug": "cucumber"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "name": "Морква",
+      "slug": "carrot"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "name": "Болгарський перець",
+      "slug": "bell-pepper"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "name": "Гриби",
+      "slug": "mushrooms"
+    },
+    {
+      "id": 12,
+      "categoryId": 3,
+      "name": "Яйця",
+      "slug": "eggs"
+    },
+    {
+      "id": 13,
+      "categoryId": 3,
+      "name": "Молоко",
+      "slug": "milk"
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "name": "Сир",
+      "slug": "cheese"
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "name": "Вершки",
+      "slug": "cream"
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "name": "Вершкове масло",
+      "slug": "butter"
+    },
+    {
+      "id": 17,
+      "categoryId": 4,
+      "name": "Рис",
+      "slug": "rice"
+    },
+    {
+      "id": 18,
+      "categoryId": 4,
+      "name": "Макарони",
+      "slug": "pasta"
+    },
+    {
+      "id": 19,
+      "categoryId": 4,
+      "name": "Хліб",
+      "slug": "bread"
+    },
+    {
+      "id": 20,
+      "categoryId": 5,
+      "name": "Квасоля",
+      "slug": "beans"
+    },
+    {
+      "id": 21,
+      "categoryId": 6,
+      "name": "Оливкова олія",
+      "slug": "olive-oil"
+    }
+  ],
+
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Паста з куркою",
+      "slug": "chicken-pasta",
+      "description": "Паста з курячим філе у вершковому соусі",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 25,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 1,
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "productId": 18,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 15,
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Рис з куркою",
+      "slug": "chicken-rice",
+      "description": "Рис з куркою та овочами",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 35,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 1,
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "productId": 17,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 9,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Смажена картопля",
+      "slug": "fried-potatoes",
+      "description": "Смажена картопля з цибулею та часником",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 25,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 4,
+          "amount": 500,
+          "unit": "g"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 21,
+          "amount": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "Омлет з сиром",
+      "slug": "cheese-omelette",
+      "description": "Омлет з сиром та помідорами",
+      "category": "breakfast",
+      "difficulty": "easy",
+      "cookingTime": 10,
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": 12,
+          "amount": 3,
+          "unit": "pcs"
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g"
+        },
+        {
+          "productId": 7,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 16,
+          "amount": 10,
+          "unit": "g"
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "name": "Паста з яловичиною",
+      "slug": "beef-pasta",
+      "description": "Паста з яловичиною та томатним соусом",
+      "category": "main",
+      "difficulty": "medium",
+      "cookingTime": 35,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 2,
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "productId": 18,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 7,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "name": "Курка з грибами",
+      "slug": "chicken-mushrooms",
+      "description": "Куряче філе з грибами у вершковому соусі",
+      "category": "main",
+      "difficulty": "medium",
+      "cookingTime": 30,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 1,
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "productId": 11,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 15,
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "name": "Рис з овочами",
+      "slug": "vegetable-rice",
+      "description": "Рис з морквою, перцем та цибулею",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 25,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 17,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 9,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 10,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 21,
+          "amount": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+
+    {
+      "id": 8,
+      "name": "Паста в томатному соусі",
+      "slug": "tomato-pasta",
+      "description": "Макарони з томатами, часником та сиром",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 20,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 18,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 7,
+          "amount": 3,
+          "unit": "pcs"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g",
+          "optional": true
+        },
+        {
+          "productId": 21,
+          "amount": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "name": "Грінки з яйцем",
+      "slug": "egg-toast",
+      "description": "Смажений хліб з яйцем та молоком",
+      "category": "breakfast",
+      "difficulty": "easy",
+      "cookingTime": 10,
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": 19,
+          "amount": 3,
+          "unit": "pcs"
+        },
+        {
+          "productId": 12,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 13,
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "productId": 16,
+          "amount": 10,
+          "unit": "g"
+        }
+      ]
+    },
+
+    {
+      "id": 10,
+      "name": "Гарячі бутерброди",
+      "slug": "hot-sandwiches",
+      "description": "Хліб з сиром та помідорами",
+      "category": "snack",
+      "difficulty": "easy",
+      "cookingTime": 10,
+      "servings": 1,
+      "ingredients": [
+        {
+          "productId": 19,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 14,
+          "amount": 80,
+          "unit": "g"
+        },
+        {
+          "productId": 7,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 16,
+          "amount": 10,
+          "unit": "g"
+        }
+      ]
+    },
+
+    {
+      "id": 11,
+      "name": "Овочевий омлет",
+      "slug": "vegetable-omelette",
+      "description": "Омлет з помідорами, перцем та сиром",
+      "category": "breakfast",
+      "difficulty": "easy",
+      "cookingTime": 15,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 12,
+          "amount": 4,
+          "unit": "pcs"
+        },
+        {
+          "productId": 7,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 10,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "name": "Салат з куркою",
+      "slug": "chicken-salad",
+      "description": "Салат з куркою, овочами та сиром",
+      "category": "salad",
+      "difficulty": "easy",
+      "cookingTime": 20,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 1,
+          "amount": 250,
+          "unit": "g"
+        },
+        {
+          "productId": 7,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 8,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 10,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g",
+          "optional": true
+        },
+        {
+          "productId": 21,
+          "amount": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+
+    {
+      "id": 13,
+      "name": "Салат з квасолею",
+      "slug": "bean-salad",
+      "description": "Салат з квасолею, овочами та оливковою олією",
+      "category": "salad",
+      "difficulty": "easy",
+      "cookingTime": 10,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 20,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 7,
+          "amount": 2,
+          "unit": "pcs"
+        },
+        {
+          "productId": 8,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 5,
+          "amount": 0.5,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 21,
+          "amount": 20,
+          "unit": "ml"
+        }
+      ]
+    },
+
+    {
+      "id": 14,
+      "name": "М'ясо з картоплею",
+      "slug": "beef-potatoes",
+      "description": "Яловичина з картоплею, морквою та цибулею",
+      "category": "main",
+      "difficulty": "medium",
+      "cookingTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 2,
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "productId": 4,
+          "amount": 500,
+          "unit": "g"
+        },
+        {
+          "productId": 5,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 9,
+          "amount": 1,
+          "unit": "pcs"
+        },
+        {
+          "productId": 6,
+          "amount": 2,
+          "unit": "pcs",
+          "optional": true
+        }
+      ]
+    },
+
+    {
+      "id": 15,
+      "name": "Паста з беконом",
+      "slug": "bacon-pasta",
+      "description": "Паста з беконом у вершковому соусі",
+      "category": "main",
+      "difficulty": "easy",
+      "cookingTime": 25,
+      "servings": 2,
+      "ingredients": [
+        {
+          "productId": 3,
+          "amount": 150,
+          "unit": "g"
+        },
+        {
+          "productId": 18,
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "productId": 15,
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "productId": 6,
+          "amount": 1,
+          "unit": "pcs",
+          "optional": true
+        },
+        {
+          "productId": 14,
+          "amount": 50,
+          "unit": "g",
+          "optional": true
+        }
+      ]
     }
   ]
 }
