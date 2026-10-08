@@ -1,5 +1,5 @@
 .recipe-card {
-  --card-accent: #e8794f;
+  --card-accent: var(--primary);
   position: relative;
   isolation: isolate;
   display: flex;
@@ -7,11 +7,11 @@
   min-height: 270px;
   padding: 1.5rem;
   overflow: hidden;
-  color: #29251f;
-  background: linear-gradient(145deg, #fffdf8 0%, #fff7e9 100%);
-  border: 1px solid rgba(117, 83, 45, .12);
+  color: var(--text-primary);
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
+  border: 1px solid var(--border-primary);
   border-radius: 24px;
-  box-shadow: 0 8px 24px rgba(80, 55, 25, .08);
+  box-shadow: var(--shadow-card);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease;
 
   &::before {
@@ -22,7 +22,7 @@
     width: 170px;
     height: 170px;
     content: '';
-    background: radial-gradient(circle, rgba(244, 174, 102, .3), rgba(244, 174, 102, 0) 70%);
+    background: radial-gradient(circle, color-mix(in srgb, var(--primary) 22%, transparent), transparent 70%);
     transition: transform .5s ease;
   }
 
@@ -40,8 +40,9 @@
 
   &:hover {
     transform: translateY(-8px) rotate(-.5deg);
-    border-color: rgba(232, 121, 79, .35);
-    box-shadow: 0 20px 38px rgba(80, 55, 25, .16);
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: 0 20px 38px color-mix(in srgb, var(--text-primary) 14%, transparent);
   }
 
   &:hover::before { transform: scale(1.35) translate(-8px, 8px); }
@@ -49,13 +50,13 @@
 
   &__topline, &__details { display: flex; align-items: center; }
   &__topline { justify-content: space-between; margin-bottom: 1.25rem; }
-  &__eyebrow { color: #a18f7c; font-size: .66rem; font-weight: 800; letter-spacing: .14em; }
+  &__eyebrow { color: var(--text-muted); font-size: .66rem; font-weight: 800; letter-spacing: .14em; }
   &__sparkle { color: var(--card-accent); font-size: 1.2rem; transition: transform .4s ease; }
   &:hover &__sparkle { transform: rotate(75deg) scale(1.25); }
 
   &__header {
     margin: 0 0 .75rem;
-    color: #29251f;
+    color: var(--text-primary);
     font-family: var(--heading), serif;
     font-size: clamp(1.35rem, 2vw, 1.75rem);
     font-weight: 750;
@@ -67,7 +68,7 @@
     flex: 1;
     margin: 0 0 1.5rem;
     overflow: hidden;
-    color: #766d63;
+    color: var(--text-secondary);
     font-size: .94rem;
     line-height: 1.65;
     -webkit-box-orient: vertical;
@@ -76,8 +77,8 @@
 
   &__details { flex-wrap: wrap; gap: .55rem; }
   &__badge, &__detail { padding: .48rem .7rem; border-radius: 999px; font-size: .76rem; font-weight: 650; }
-  &__badge { color: #a34e32; background: #fae8dc; }
-  &__detail { color: #665d53; background: rgba(255, 255, 255, .78); }
+  &__badge { color: var(--tag-text); background: var(--tag-bg); }
+  &__detail { color: var(--text-secondary); background: var(--bg-tertiary); }
   &__detail span { margin-right: .15rem; color: var(--card-accent); }
 }
 
