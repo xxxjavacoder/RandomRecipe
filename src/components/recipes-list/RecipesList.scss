@@ -1,0 +1,6 @@
+.recipes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 1.25rem;
+  padding-block: 1rem;
+}

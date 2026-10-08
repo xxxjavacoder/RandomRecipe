@@ -1,7 +1,11 @@
-export const MainPage = () => {
+import RecipesList from "../../components/recipes-list/index.jsx";
+
+const MainPage = () => {
     return (
         <>
-            Main Page
+            <RecipesList />
         </>
     )
 }
+
+export default MainPage;
