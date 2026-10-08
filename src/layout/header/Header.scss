@@ -1,39 +1,12 @@
 .header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  background-color: var(--bg-secondary);
-  box-shadow: var(--shadow-card);
+  padding: 10px;
   border-bottom: 1px solid var(--border-secondary);
-  
-  &__logo-wrapper {
-    border-radius: 9px;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
+  background-color: var(--bg-sidebar);
 
-    img {
-      height: inherit;
-      width: inherit;
-    }
-  }
-
-  &__nav {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  &__link {
-    color: var(--text-primary);
-    font-weight: 600;
-    text-decoration: none;
-
-    &:hover {
-      color: var(--accent-primary);
-    }
+  &__title {
+    height: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
   }
 }

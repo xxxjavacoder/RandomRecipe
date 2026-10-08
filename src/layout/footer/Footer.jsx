@@ -3,7 +3,7 @@ import './Footer.scss';
 export const Footer = () => {
     return (
         <footer className="footer">
-            HireHub | 2026 by Volodymyr XXXCoder Lytvyniuk
+            RandomReceipt | 2026 by Volodymyr XXXCoder Lytvyniuk
         </footer>
     )
 }
