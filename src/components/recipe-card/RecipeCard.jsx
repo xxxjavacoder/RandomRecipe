@@ -1,7 +1,8 @@
 import './RecipeCard.scss';
+import {Link} from "react-router-dom";
 
 const RecipeCard = ({recipe}) => {
-    const {name, description, difficulty, cookingTime, servings} = recipe;
+    const {id, name, description, difficulty, cookingTime, servings} = recipe;
 
     return (
         <article className="recipe-card">
@@ -16,6 +17,7 @@ const RecipeCard = ({recipe}) => {
                 <span className="recipe-card__detail"><span aria-hidden="true">◷</span> {cookingTime}</span>
                 <span className="recipe-card__detail"><span aria-hidden="true">♧</span> {servings}</span>
             </div>
+            <Link to={`/recipes/${id}`} className="recipe-card__link">Переглянути рецепт</Link>
         </article>
     )
 }

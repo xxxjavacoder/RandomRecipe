@@ -7,6 +7,7 @@ import Footer from '../layout/footer/index.jsx';
 import Container from '../layout/container/index.jsx';
 
 import MainPage from "../pages/main-page/index.jsx";
+import RecipePage from "../pages/recipe-page/index.jsx";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Container>
                     <Routes>
                         <Route path="/" element={<MainPage />} />
+                        <Route path="/recipes/:id" element={<RecipePage />} />
                     </Routes>
                 </Container>
             </div>

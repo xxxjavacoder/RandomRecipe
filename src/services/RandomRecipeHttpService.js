@@ -33,11 +33,19 @@ export const useRandomRecipeHttpService = () => {
         return await response;
     }
 
+    const getRecipe = async (id) => {
+        const url = `${API_URL}/recipes`;
+        const response = await request(url);
+        const recipe = await response.find(item => item.id === parseInt(id));
+        return await recipe;
+    }
+
     return {
         getIngredientCategories,
         getIngredients,
         getRecipesCategories,
         getRecipes,
+        getRecipe,
         loading,
         request,
         error
