@@ -4,3 +4,11 @@
   gap: 1.25rem;
   padding-block: 1rem;
 }
+
+.recipes-filters {
+  display: flex;
+
+  &__category-select {
+    max-width: 200px;
+  }
+}

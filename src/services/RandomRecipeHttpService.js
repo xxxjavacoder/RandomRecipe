@@ -5,16 +5,23 @@ const API_URL = 'http://localhost:3000';
 export const useRandomRecipeHttpService = () => {
     const {loading, request, error} = useHttp();
 
-    // Categories
-    const getCategories = async () => {
+    // Ingredient Categories
+    const getIngredientCategories = async () => {
         const url = `${API_URL}/categories`;
         const response = await request(url);
         return await response;
     }
 
     // Ingredients
-    const getProducts = async () => {
+    const getIngredients = async () => {
         const url = `${API_URL}/ingredients`;
+        const response = await request(url);
+        return await response;
+    }
+
+    // Recipes Categories
+    const getRecipesCategories = async () => {
+        const url = `${API_URL}/recipeCategories`;
         const response = await request(url);
         return await response;
     }
@@ -27,8 +34,9 @@ export const useRandomRecipeHttpService = () => {
     }
 
     return {
-        getCategories,
-        getProducts,
+        getIngredientCategories,
+        getIngredients,
+        getRecipesCategories,
         getRecipes,
         loading,
         request,
