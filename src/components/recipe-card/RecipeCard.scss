@@ -80,9 +80,49 @@
   &__badge { color: var(--tag-text); background: var(--tag-bg); }
   &__detail { color: var(--text-secondary); background: var(--bg-tertiary); }
   &__detail span { margin-right: .15rem; color: var(--card-accent); }
+
+  &__link {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: .55rem;
+    margin-top: 1.25rem;
+    padding: .65rem .9rem;
+    color: var(--text-inverse);
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    font-size: .86rem;
+    font-weight: 750;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+
+    &::after {
+      content: '→';
+      font-size: 1rem;
+      transition: transform .2s ease;
+    }
+
+    &:hover {
+      color: var(--text-inverse);
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+      box-shadow: 0 5px 14px color-mix(in srgb, var(--primary) 28%, transparent);
+      transform: translateY(-1px);
+    }
+
+    &:hover::after { transform: translateX(3px); }
+
+    &:focus-visible {
+      outline: 3px solid var(--border-focus);
+      outline-offset: 3px;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .recipe-card, .recipe-card::before, .recipe-card::after, .recipe-card__sparkle { transition: none; }
+  .recipe-card, .recipe-card::before, .recipe-card::after, .recipe-card__sparkle, .recipe-card__link, .recipe-card__link::after { transition: none; }
   .recipe-card:hover { transform: none; }
+  .recipe-card__link:hover { transform: none; }
 }
