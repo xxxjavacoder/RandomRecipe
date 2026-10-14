@@ -11,6 +11,7 @@ import Container from '../layout/container/index.jsx';
 import MainPage from "../pages/main-page/index.jsx";
 import RecipePage from "../pages/recipe-page/index.jsx";
 import {useEffect, useState} from "react";
+import GetRandomRecipe from "../pages/get-random-recipe/index.jsx";
 
 function App() {
     const [ingredients, setIngredients] = useState({ingredients: [], loading: true});
@@ -29,6 +30,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<MainPage />} />
                             <Route path="/recipes/:id" element={<RecipePage />} />
+                            <Route path="/random-recipe" element={<GetRandomRecipe />} />
                         </Routes>
                     </IngredientsContext.Provider>
                 </Container>

@@ -1,0 +1,89 @@
+.loader {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0;
+  padding: 1rem;
+  overflow: hidden;
+  background: var(--bg-overlay);
+  backdrop-filter: brightness(.38) blur(5px);
+  -webkit-backdrop-filter: brightness(.38) blur(5px);
+
+  &__scene { width: min(100%, 230px); }
+  &__art { display: block; width: 100%; height: auto; overflow: visible; }
+
+  &__surface,
+  &__burner,
+  &__controls {
+    fill: none;
+    stroke: var(--text-secondary);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__burner {
+    animation: loader-heat-first 5s ease-in-out infinite;
+  }
+
+  &__burner--second { animation-name: loader-heat-second; }
+  &__burner--third { animation-name: loader-heat-third; }
+  &__burner--fourth { animation-name: loader-heat-fourth; }
+  &__controls { stroke-width: 2; }
+
+}
+
+@keyframes loader-heat-first {
+  0%, 8%, 88%, 100% {
+    stroke: var(--text-secondary);
+    filter: none;
+  }
+
+  18%, 78% {
+    stroke: var(--danger);
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--danger) 55%, transparent));
+  }
+}
+
+@keyframes loader-heat-second {
+  0%, 20%, 88%, 100% {
+    stroke: var(--text-secondary);
+    filter: none;
+  }
+
+  30%, 78% {
+    stroke: var(--danger);
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--danger) 55%, transparent));
+  }
+}
+
+@keyframes loader-heat-third {
+  0%, 38%, 88%, 100% {
+    stroke: var(--text-secondary);
+    filter: none;
+  }
+
+  48%, 78% {
+    stroke: var(--danger);
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--danger) 55%, transparent));
+  }
+}
+
+@keyframes loader-heat-fourth {
+  0%, 56%, 88%, 100% {
+    stroke: var(--text-secondary);
+    filter: none;
+  }
+
+  66%, 78% {
+    stroke: var(--danger);
+    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--danger) 55%, transparent));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader__burner { animation: none; }
+}

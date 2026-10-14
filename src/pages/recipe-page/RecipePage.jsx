@@ -5,6 +5,7 @@ import IngredientContext from "../../context/IngredientContext.js";
 
 import {useRandomRecipeHttpService} from "../../services/RandomRecipeHttpService.js";
 import RecipeView from "../../components/recipe-view/index.jsx";
+import Loader from "../../partials/loader/index.jsx";
 
 const RecipePage = () => {
     const params = useParams();
@@ -32,7 +33,7 @@ const RecipePage = () => {
         <>
             {
                 !state.loading && !ingredientsContext.loading ?
-                    <RecipeView recipe={state.recipe} ingredientsContext={ingredientsContext} /> : "Loading..."
+                    <RecipeView recipe={state.recipe} ingredientsContext={ingredientsContext} /> : <Loader />
             }
         </>
     )
