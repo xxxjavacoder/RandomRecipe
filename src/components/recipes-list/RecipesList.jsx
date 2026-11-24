@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {useRandomRecipeHttpService} from "../../services/RandomRecipeHttpService.js";
+import { useNavigate } from 'react-router-dom';
 
 import RecipeCard from "../recipe-card/index.jsx";
 import {Select} from "../../partials/select/Select.jsx";
@@ -12,6 +13,8 @@ const RecipesList = () => {
     const [category, setCategory] = useState(null);
 
     const {getRecipes, getRecipesCategories} = useRandomRecipeHttpService();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         getRecipes()
@@ -30,8 +33,21 @@ const RecipesList = () => {
         ? recipes.filter((recipe) => recipe.category === category)
         : recipes;
 
+    const getRandomRecipe = () => {
+        const randomIndex = Math.floor(Math.random() * recipes.length);
+       navigate(`/recipes/${recipes[randomIndex].id}`);
+    }
+
     return (
         <>
+            <div className="get-random-link-block">
+                <button
+                    className="get-random-link-block__link"
+                    onClick={getRandomRecipe}
+                >
+                    Get Random Recipe
+                </button>
+            </div>
             <div className="recipes-filters">
                 <Select
                     className="recipes-filters__category-select"
